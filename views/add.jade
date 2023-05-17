@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container.mt-5
+      form(action='/add' method='post')
+        .mb-3
+          h3 Add Medicine
+          label Name
+          input#exampleInputEmail1.form-control(type='text',name='name')
+        .mb-3
+          label Description
+          input#exampleInputPassword1.form-control(type='text',name='description')
+        .mb-3
+          label Price
+          input#exampleInputPassword1.form-control(type='number',name='price')
+        button.btn.btn-primary(type='submit') Submit

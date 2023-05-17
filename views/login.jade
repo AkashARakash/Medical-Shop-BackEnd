@@ -1,0 +1,18 @@
+extends mdb-min
+
+block content
+
+    section.vh-100
+      .container.py-5.h-100
+        .row.d-flex.justify-content-center.align-items-center.h-100
+          .col-12.col-md-8.col-lg-6.col-xl-5
+            .card.shadow-2-strong(style='border-radius: 1rem;')
+              .card-body.p-5
+                h3.mb-3 Sign in
+                form(action='/users/login' method='post')  
+                   label User Name
+                   input.form-control(type='text',name='username',placeholder='User Name')
+                   label Password     
+                   input.form-control(type='password',name='password' placeholder='Password')           
+                   button.btn.btn-info.btn-lg.btn-block.mt-3(type='submit') Login
+                   a.btn.mt-3.btn-info(href='/users/signup') Signup

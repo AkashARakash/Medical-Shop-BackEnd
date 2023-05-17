@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  h1.container.mt-4.title #{title} 
+  ul.list-group.mt-4
+    each medicine, i in medicines 
+      li.container.list-group-item 
+        h3.style(style='font-size:40px; font-weight:bold;')=medicine.name        
+         a.btn.btn-danger.btn-right(href='/delete/'+medicine._id, onclick="return confirm('Are you sure?')") Delete
+         a.btn.btn-success.btn-right.mx-3(href='/edit/'+medicine._id) Edit
+           

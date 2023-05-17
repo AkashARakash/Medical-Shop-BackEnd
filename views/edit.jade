@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container.mt-5
+      form(action='/edit/'+medicine._id method='post')
+        .mb-3
+          h3 Edit Medicine
+          label.form-label(for='exampleInputEmail1') Name
+          input#exampleInputEmail1.form-control(type='text' value=medicine.name name='name')
+        .mb-3
+          label.form-label(for='exampleInputPassword1') Description
+          input#exampleInputPassword1.form-control(type='text' value=medicine.description name='description')
+        .mb-3
+          label.form-label(for='exampleInputPassword1') Price
+          input#exampleInputPassword1.form-control(type='number' value=medicine.price name='price')
+        button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title} 
+
+  if searchResults.length > 0
+    ul.mt-4
+      each result, i in searchResults 
+        li.name=result.name 
+        p.result-details=result.description
+        p.result-details=result.price    
+  else 
+    p.not Medicines Not Found     
+           
+           
